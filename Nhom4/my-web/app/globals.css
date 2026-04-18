@@ -1,13 +1,5 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-/* BACKGROUND */
-body {
+/* WRAPPER */
+.wrapper {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -15,25 +7,18 @@ body {
   background: linear-gradient(135deg, #dbeafe, #e9d5ff);
 }
 
-/* DARK MODE */
-.dark body {
-  background: linear-gradient(135deg, #020617, #0f172a);
-}
-
-/* CONTAINER */
+/* APP */
 .app {
   width: 100%;
-  max-width: 500px;
+  max-width: 650px;
   padding: 24px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-}
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 
-.dark .app {
-  background: rgba(30, 41, 59, 0.85);
-  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -41,9 +26,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid #e5e7eb;
 }
 
+.header-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* BADGE */
 .badge {
   font-size: 12px;
   padding: 4px 10px;
@@ -52,6 +48,7 @@ body {
   color: #7c3aed;
 }
 
+/* BUTTON TOGGLE */
 .toggle {
   width: 32px;
   height: 32px;
@@ -61,14 +58,14 @@ body {
   cursor: pointer;
 }
 
-/* INPUT */
-.input-group {
+/* INPUT SECTION */
+.input-section {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-.input-group input {
+.input-section input {
   flex: 1;
   padding: 10px 14px;
   border-radius: 12px;
@@ -76,7 +73,7 @@ body {
   outline: none;
 }
 
-.input-group button {
+.input-section button {
   padding: 10px 16px;
   border-radius: 12px;
   border: none;
@@ -90,41 +87,43 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  max-height: 300px;
+  overflow-y: auto;
 }
 
-/* ITEM */
+/* NOTE ITEM */
 .note {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 14px;
   border-radius: 12px;
   background: white;
   border: 1px solid #eee;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: 0.2s;
 }
 
 .note:hover {
-  transform: scale(1.02);
-}
-
-.dark .note {
-  background: #0f172a;
-  border: 1px solid #334155;
+  transform: translateY(-2px);
 }
 
 /* TEXT */
 .note-text {
   font-size: 14px;
+  font-weight: 500;
 }
 
 .note-time {
   font-size: 11px;
   color: #9ca3af;
+  margin-top: 4px;
 }
 
-/* DELETE */
+/* DELETE BUTTON */
 .delete {
   padding: 4px 10px;
   border-radius: 8px;
@@ -132,4 +131,41 @@ body {
   color: #ef4444;
   border: none;
   cursor: pointer;
+}
+
+.dark {
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+/* APP */
+.dark .app {
+  background: rgba(30, 41, 59, 0.9);
+  color: white;
+}
+
+/* HEADER */
+.dark .header {
+  border-bottom: 1px solid #334155;
+}
+
+/* INPUT */
+.dark .input-section {
+  background: #020617;
+}
+
+.dark .input-section input {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+}
+
+/* NOTE */
+.dark .note {
+  background: #0f172a;
+  border: 1px solid #334155;
+}
+
+/* TEXT */
+.dark .note-time {
+  color: #94a3b8;
 }
