@@ -1,0 +1,135 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+}
+
+/* DARK MODE */
+.dark body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+/* CONTAINER */
+.app {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .app {
+  background: rgba(30, 41, 59, 0.85);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+/* INPUT */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.input-group button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  color: white;
+  cursor: pointer;
+}
+
+/* LIST */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ITEM */
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.note:hover {
+  transform: scale(1.02);
+}
+
+.dark .note {
+  background: #0f172a;
+  border: 1px solid #334155;
+}
+
+/* TEXT */
+.note-text {
+  font-size: 14px;
+}
+
+.note-time {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* DELETE */
+.delete {
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  cursor: pointer;
+}
