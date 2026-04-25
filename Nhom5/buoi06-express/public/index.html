@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo API</title>
+</head>
+<body>
+
+<h2>FORM 1 — GET /api/info</h2>
+<form id="formGet">
+    <input type="text" id="name" placeholder="Tên" required>
+    <input type="number" id="age" placeholder="Tuổi" required>
+    <button type="submit">Gửi</button>
+</form>
+<div id="resultGet"></div>
+
+<hr>
+
+<h2>FORM 2 — POST /api/register</h2>
+<form id="formPost">
+    <input type="text" id="name2" placeholder="Tên" required>
+    <input type="number" id="age2" placeholder="Tuổi" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button type="submit">Gửi</button>
+</form>
+<div id="resultPost"></div>
+
+<script>
+    // ===== FORM GET =====
+    document.getElementById('formGet').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+
+      try {
+        const res = await fetch(`/api/info?name=${name}&age=${age}`);
+        const data = await res.json();
+
+        if (!res.ok) throw
