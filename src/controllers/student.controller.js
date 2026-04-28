@@ -89,4 +89,3 @@ class StudentController {
 }
 
 module.exports = StudentController;
-1

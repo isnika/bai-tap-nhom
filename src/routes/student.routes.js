@@ -12,4 +12,4 @@ router.put("/:id", validateId, controller.update);
 router.patch("/:id/score", validateId, controller.updateScore);
 router.delete("/:id", validateId, controller.delete);
 
-module.exports = router;1
+module.exports = router;
