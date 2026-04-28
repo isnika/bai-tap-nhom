@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/student-api.iml" filepath="$PROJECT_DIR$/.idea/student-api.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/bai-tap-nhom.iml" filepath="$PROJECT_DIR$/.idea/bai-tap-nhom.iml" />
+>>>>>>> 9b55fd54971ba82037955b77099c7f14fa7dd32f
     </modules>
   </component>
 </project>
