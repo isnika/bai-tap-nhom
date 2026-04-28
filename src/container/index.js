@@ -6,3 +6,4 @@ const service = new StudentService(Student);
 const controller = new StudentController(service);
 
 module.exports = { controller };
+1

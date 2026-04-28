@@ -15,6 +15,6 @@ app.use(helmet());
 
 app.use("/api/students", routes);
 
-app.use(errorHandler);
+app.use(errorHandler);1
 
 module.exports = app;
